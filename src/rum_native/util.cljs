@@ -37,3 +37,30 @@
   "Create a new react element useable by clojure/rum from a react native js component."
   [rn-comp opts & children]
   (apply js/React.createElement rn-comp (clj->js opts) children))
+
+
+;;; NON-REACT Utilities
+
+(defn deep-merge
+  "Recursively merges maps.
+
+  This code snippet is based on [this](http://dnaeon.github.io/recursively-merging-maps-in-clojure/)
+  example by Marin Atanasov Nikolov."
+  [& maps]
+  (letfn [(m [& xs]
+            (if (some #(and (map? %) (not (record? %))) xs)
+              (apply merge-with m xs)
+              (last xs)))]
+    (reduce m maps)))
+
+(defn deep-merge-with
+  "Recursively merges maps. Applies function f when we have duplicate keys.
+
+  This code snippet is based on [this](http://dnaeon.github.io/recursively-merging-maps-in-clojure/)
+  example by Marin Atanasov Nikolov."
+  [f & maps]
+  (letfn [(m [& xs]
+            (if (some #(and (map? %) (not (record? %))) xs)
+              (apply merge-with m xs)
+              (apply f xs)))]
+    (reduce m maps)))
