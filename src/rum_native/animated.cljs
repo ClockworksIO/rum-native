@@ -18,6 +18,9 @@
 (def ease (.-ease (.-Easing ReactNative)))
 (def ease-out (.-out (.-Easing ReactNative)))
 
+;; Layout Animation
+(def LayoutAnimation (.-LayoutAnimation ReactNative))
+
 ;;; Mixins for RUM
 
 (defn animation-mixin

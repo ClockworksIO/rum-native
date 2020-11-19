@@ -8,6 +8,7 @@
 (def Dimensions (.-Dimensions ReactNative))
 (def Keyboard (.-Keyboard ReactNative))
 (def Platform (.-Platform ReactNative))
+(def UIManager (.-UIManager ReactNative))
 (def AppState (.-AppState ReactNative))
 (def NativeModules (.-NativeModules ReactNative))
 (def DevSettings (.-DevSettings NativeModules))
