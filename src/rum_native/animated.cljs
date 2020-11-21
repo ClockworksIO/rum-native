@@ -17,6 +17,7 @@
 (def AnimatedSpring (.-spring Animated))
 (def ease (.-ease (.-Easing ReactNative)))
 (def ease-out (.-out (.-Easing ReactNative)))
+(def linear (.-linear (.-Easing ReactNative)))
 
 ;; Layout Animation
 (def LayoutAnimation (.-LayoutAnimation ReactNative))
