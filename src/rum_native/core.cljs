@@ -28,3 +28,4 @@
 (def TouchableWithoutFeedback (partial create-element (.-TouchableWithoutFeedback ReactNative)))
 (def Modal (partial create-element (.-Modal ReactNative)))
 (def StatusBar (partial create-element (.-StatusBar ReactNative)))
+(def ImageBackground (partial create-element (.-ImageBackground ReactNative)))
