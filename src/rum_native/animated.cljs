@@ -18,6 +18,7 @@
 (def ease (.-ease (.-Easing ReactNative)))
 (def ease-out (.-out (.-Easing ReactNative)))
 (def linear (.-linear (.-Easing ReactNative)))
+(def bezier (.-bezier (.-Easing ReactNative)))
 
 ;; Layout Animation
 (def LayoutAnimation (.-LayoutAnimation ReactNative))
