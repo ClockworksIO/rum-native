@@ -15,8 +15,10 @@
 (def AnimatedValue (.-Value Animated))
 (def AnimatedTiming (.-timing Animated))
 (def AnimatedSpring (.-spring Animated))
+(def AnimatedDecay (.-decay Animated))
 (def ease (.-ease (.-Easing ReactNative)))
 (def ease-out (.-out (.-Easing ReactNative)))
+(def ease-in (.-in (.-Easing ReactNative)))
 (def linear (.-linear (.-Easing ReactNative)))
 (def bezier (.-bezier (.-Easing ReactNative)))
 
